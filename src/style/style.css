@@ -66,9 +66,20 @@ h1 {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-button {
+.ratings button:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-orange);
+}
+
+.ratings button[data-status="selected"] {
+  color: var(--clr-white);
+  background-color: var(--clr-medium-gray);
+}
+
+.submit-btn {
   border: none;
   background-color: var(--clr-orange);
   width: 100%;
@@ -79,6 +90,12 @@ button {
   text-transform: uppercase;
   padding: 0.5rem 0;
   border-radius: 5rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  color: var(--clr-orange);
+  background-color: var(--clr-white);
 }
 
 footer {

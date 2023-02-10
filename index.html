@@ -31,7 +31,7 @@
   <body>
     <main>
       <!-- Rating state start -->
-      <div class="card">
+      <div id="rating" class="card rating">
         <img src="./src/images/icon-star.svg" alt="" />
 
         <h1>How did we do?</h1>
@@ -49,12 +49,12 @@
           <button>5</button>
         </div>
 
-        <button>Submit</button>
+        <button class="submit-btn">Submit</button>
       </div>
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
-      <div class="card">
+      <div id="thanksMessage" class="card" data-status="hidden">
         <img src="./src/images/illustration-thank-you.svg" alt="" />
 
         <div class="user-rating">
