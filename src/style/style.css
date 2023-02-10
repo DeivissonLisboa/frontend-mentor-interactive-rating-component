@@ -4,7 +4,7 @@
   --clr-orange: hsl(25, 97%, 53%);
 
   --clr-white: hsl(0, 0%, 100%);
-  --clr-light-gray: hsl(217, 12%, 63%);
+  --clr-light-gray: hsla(217, 12%, 63%, 0.1);
   --clr-medium-gray: hsl(216, 12%, 54%);
   --clr-blue: hsl(213, 19%, 18%);
   --clr-dark-blue: hsl(216, 12%, 8%);
@@ -13,4 +13,76 @@
   --ff-1: "Overpass", sans-serif;
   --fw-1: 400;
   --fw-2: 700;
+}
+
+body {
+  background-color: var(--clr-dark-blue);
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-1);
+  font-size: var(--fs-1);
+  font-weight: var(--fw-1);
+  color: var(--clr-medium-gray);
+}
+
+div[data-status="hidden"] {
+  display: none;
+}
+
+main {
+  background-color: var(--clr-blue);
+  width: 85vw;
+  border-radius: 1em;
+  padding: 1.5rem;
+}
+
+main .card > * + * {
+  margin-top: 1rem;
+}
+
+.rating img {
+  background-color: var(--clr-light-gray);
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+h1 {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+}
+
+.ratings {
+  font-family: inherit;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.ratings button {
+  border: none;
+  background-color: var(--clr-light-gray);
+  color: var(--clr-medium-gray);
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+button {
+  border: none;
+  background-color: var(--clr-orange);
+  width: 100%;
+  color: var(--clr-white);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  border-radius: 5rem;
+}
+
+footer {
+  width: 100vw;
+  position: absolute;
+  bottom: 1rem;
 }
