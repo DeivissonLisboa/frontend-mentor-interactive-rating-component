@@ -98,6 +98,23 @@ h1 {
   background-color: var(--clr-white);
 }
 
+.thanks-card {
+  text-align: center;
+}
+
+.thanks-card img {
+  margin-inline: auto;
+}
+
+.thanks-card .user-rating {
+  width: 65%;
+  margin-inline: auto;
+  background-color: var(--clr-light-gray);
+  color: var(--clr-orange);
+  border-radius: 5rem;
+  padding: 0.25rem;
+}
+
 footer {
   width: 100vw;
   position: absolute;
