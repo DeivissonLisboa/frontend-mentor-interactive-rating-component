@@ -11,8 +11,13 @@ RATINGS.forEach((rating) => {
   rating.addEventListener("input", () => {
     selectedRating = rating.name
 
-    RATINGS.forEach((radio) => (radio.checked = false))
+    RATINGS.forEach((radio) => {
+      radio.checked = false
+      radio.parentNode.dataset.status = ""
+    })
+
     rating.checked = true
+    rating.parentNode.dataset.status = "selected"
   })
 })
 
