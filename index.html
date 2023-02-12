@@ -32,7 +32,7 @@
   <body>
     <main>
       <!-- Rating state start -->
-      <div id="rating" class="card rating">
+      <div id="rating" class="card rating flow">
         <img src="./src/images/icon-star.svg" alt="" />
 
         <h1>How did we do?</h1>
@@ -44,21 +44,33 @@
 
         <fieldset>
           <legend data-status="hidden">Ratings</legend>
-          <form action="">
-            <input type="radio" name="1" id="radio1" />
-            <label for="1">1</label>
+          <form action="" class="flow">
+            <div class="ratings">
+              <label>
+                <input type="radio" name="1" id="radio1" />
+                <p>1</p>
+              </label>
 
-            <input type="radio" name="2" id="radio2" />
-            <label for="2">2</label>
+              <label>
+                <input type="radio" name="2" id="radio2" />
+                <p>2</p>
+              </label>
 
-            <input type="radio" name="3" id="radio3" />
-            <label for="3">3</label>
+              <label>
+                <input type="radio" name="3" id="radio3" />
+                <p>3</p>
+              </label>
 
-            <input type="radio" name="4" id="radio4" />
-            <label for="4">4</label>
+              <label>
+                <input type="radio" name="4" id="radio4" />
+                <p>4</p>
+              </label>
 
-            <input type="radio" name="5" id="radio5" />
-            <label for="5">5</label>
+              <label>
+                <input type="radio" name="5" id="radio5" />
+                <p>5</p>
+              </label>
+            </div>
 
             <button type="submit" class="submit-btn">Submit</button>
           </form>
@@ -67,7 +79,11 @@
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
-      <div id="thanksMessage" class="card thanks-card" data-status="hidden">
+      <div
+        id="thanksMessage"
+        class="card thanks-card flow"
+        data-status="hidden"
+      >
         <img src="./src/images/illustration-thank-you.svg" alt="" />
 
         <div class="user-rating">
