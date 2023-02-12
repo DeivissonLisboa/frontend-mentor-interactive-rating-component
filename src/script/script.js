@@ -1,4 +1,4 @@
-const RATINGS = document.querySelectorAll(".ratings button")
+const RATINGS = document.querySelectorAll("input[type='radio']")
 const RATING_CARD = document.getElementById("rating")
 const THANKS_CARD = document.getElementById("thanksMessage")
 const USER_RATING_SPAN = document.getElementById("userRating")
@@ -6,15 +6,18 @@ const SUBMIT_BUTTON = document.querySelector(".submit-btn")
 let selectedRating
 
 RATINGS.forEach((rating) => {
-  rating.addEventListener("click", () => {
-    RATINGS.forEach((ratingEl) => (ratingEl.dataset.status = ""))
+  rating.checked = false
 
-    rating.dataset.status = "selected"
-    selectedRating = rating.innerText
+  rating.addEventListener("input", () => {
+    selectedRating = rating.name
+
+    RATINGS.forEach((radio) => (radio.checked = false))
+    rating.checked = true
   })
 })
 
-SUBMIT_BUTTON.addEventListener("click", () => {
+SUBMIT_BUTTON.addEventListener("click", (e) => {
+  e.preventDefault()
   RATING_CARD.dataset.status = "hidden"
   THANKS_CARD.dataset.status = ""
   USER_RATING_SPAN.innerHTML = selectedRating
