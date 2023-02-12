@@ -25,7 +25,7 @@ body {
   color: var(--clr-medium-gray);
 }
 
-div[data-status="hidden"] {
+*[data-status="hidden"] {
   display: none;
 }
 
